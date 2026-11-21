@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-dark-primary text-white antialiased;
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+}
+
+@layer components {
+    .card {
+        @apply bg-dark-card rounded-card border border-dark-border p-6;
+    }
+    
+    .btn-primary {
+        @apply bg-accent-purple hover:bg-accent-purple-light text-white font-medium px-6 py-3 rounded-btn transition-colors duration-200;
+    }
+    
+    .btn-secondary {
+        @apply bg-dark-secondary hover:bg-dark-card text-white font-medium px-6 py-3 rounded-btn border border-dark-border transition-colors duration-200;
+    }
+    
+    .input-field {
+        @apply bg-dark-secondary border border-dark-border rounded-btn px-4 py-3 text-white placeholder-gray-500 focus:border-accent-purple focus:ring-1 focus:ring-accent-purple transition-colors;
+    }
+    
+    .stat-card {
+        @apply card flex flex-col items-center justify-center text-center;
+    }
+    
+    .badge {
+        @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+    }
+    
+    .badge-success {
+        @apply badge bg-accent-green/20 text-accent-green;
+    }
+    
+    .badge-warning {
+        @apply badge bg-yellow-500/20 text-yellow-500;
+    }
+    
+    .badge-info {
+        @apply badge bg-accent-blue/20 text-accent-blue;
+    }
+    
+    .sidebar-link {
+        @apply flex items-center gap-3 px-4 py-3 rounded-btn text-gray-400 hover:text-white hover:bg-dark-card transition-colors duration-200;
+    }
+    
+    .sidebar-link-active {
+        @apply sidebar-link bg-accent-purple/20 text-accent-purple;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #141B19;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1F2937;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #374151;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.animate-slide-in {
+    animation: slideIn 0.3s ease-out;
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.3s ease-out;
+}

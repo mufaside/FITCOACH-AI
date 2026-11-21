@@ -1,0 +1,15 @@
+#!/usr/bin/env php
+<?php
+
+define('LARAVEL_START', microtime(true));
+
+// Simplified artisan file for frontend-only demo
+// This is not the full Laravel artisan - just enough to run the project
+
+echo "FITMATE AI - Frontend Application\n";
+echo "For full Laravel functionality, please install Composer dependencies.\n";
+echo "\nTo start the application:\n";
+echo "1. Run: npm install\n";
+echo "2. Run: npm run dev (keep it running)\n";
+echo "3. In a new terminal: php -S localhost:8000 -t public\n";
+echo "4. Open browser: http://localhost:8000\n";
